@@ -13,13 +13,9 @@ with sr.Microphone() as source:
         audio = r.listen(source)
 
         #recognizes speech using google as a service (this works online)
-        text = r.recognize_google(audio)
+        google = r.recognize_google(audio)
+        sphinx = r.recognize_sphinx(audio)
 
-        if str(text).lower() == "what time is it?":
-            Time = datetime.datetime.now().strftime("%I:%M:%S")
-            print(Time)
-            break
-        
-        #print(text)
+        print("Google: [{}]\nSphinx: {}\n\n".format(google,sphinx))
 
 
