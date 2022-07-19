@@ -15,10 +15,9 @@ with sr.Microphone() as source:
         #recognizes speech using google as a service (this works online)
         text = r.recognize_google(audio)
 
-        if str(text).lower() == "what time is it?":
+        if str(text).lower() == "what time is it":
             Time = datetime.datetime.now().strftime("%I:%M:%S")
             print(Time)
-            break
         
         #print(text)
 
