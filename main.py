@@ -4,6 +4,7 @@
 
 import speech_recognition as sr
 import datetime
+import pyttsx3
 
 # obtain audio from the microphone
 r = sr.Recognizer()
@@ -13,7 +14,7 @@ with sr.Microphone() as source:
         audio = r.listen(source)
 
         #recognizes speech using google as a service (this works online)
-        text = r.recognize_google(audio)
+        text = r.recognize_google(audio, language="en-in")
 
         if str(text).lower() == "what time is it":
             Time = datetime.datetime.now().strftime("%I:%M:%S")
