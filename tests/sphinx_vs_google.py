@@ -13,7 +13,7 @@ with sr.Microphone() as source:
         audio = r.listen(source)
 
         #recognizes speech using google as a service (this works online)
-        google = r.recognize_google(audio)
+        google = r.recognize_google(audio, language='en-IN')
         sphinx = r.recognize_sphinx(audio)
 
         print("Google: [{}]\nSphinx: {}\n\n".format(google,sphinx))
