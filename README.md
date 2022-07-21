@@ -9,6 +9,6 @@ Fast, easy to download, expandible
 
 Technologies:
 
-Speech Recognition
+Speech Recognition (google / sphinx / vosk)
 Speech Synthesis
 Some sort of AI
